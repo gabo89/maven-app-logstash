@@ -48,10 +48,6 @@
             <artifactId>logback-access</artifactId>
             <version>${ch.qos.logback.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>		
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
