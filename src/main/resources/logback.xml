@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-  <appender name="stash" class="net.logstash.logback.appender.LogstashUdpSocketAppender">
-    <host>192.168.2023</host>
+  <appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    <host>10.108.71.122</host>
     <port>5000</port>
     <layout class="net.logstash.logback.layout.LogstashLayout"/>
   </appender>
