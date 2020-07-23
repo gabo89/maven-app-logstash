@@ -7,6 +7,14 @@ pipeline {
     }
 
     stages {
+
+        stage('dependecy') {
+            steps {
+                echo 'Dependency..'
+                  sh 'mvn dependency:tree'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -27,7 +35,7 @@ pipeline {
       	stage('Deliver') {
             steps {
                 echo 'starting app....'
-		sh './mvnw spring-boot:run'
+		sh 'mvn spring-boot:run'
             }
         }
     }
