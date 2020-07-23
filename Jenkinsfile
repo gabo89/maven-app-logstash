@@ -10,15 +10,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		            sh 'mvn -B -DskipTests clean package'
+		  sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-		            sh 'mvn test'
+		 sh 'mvn test'
             }	
-	          post {
+	    post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
@@ -27,7 +27,7 @@ pipeline {
       	stage('Deliver') {
             steps {
                 echo 'starting app....'
-		            sh './deliver.sh'
+		sh './mvnw spring-boot:run'
             }
         }
     }
